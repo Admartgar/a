@@ -16,7 +16,7 @@ import java.util.Calendar;
 
 public class ImportPersones {
 
-    static String nom,nom0, cog1, cog2, nomCompl;
+    static String nom,nom0, cog1, cog2;
 
     public static void ImportarPersones() {
         BufferedReader bfLector = null;
@@ -38,11 +38,10 @@ public class ImportPersones {
                 cog1 = strLinia.substring(50, 75).trim();
                 cog2 = strLinia.substring(75, 100).trim();
                 String sexe = (strLinia.substring(100, 101));
-                nomCompl = nom + cog1 + cog2;
 
                 selectPersones();
 
-                if (!nomCompl.equals(nom0)) {
+                if (nom0.equals(" ")) {
                     //Preparem el Date
                     Calendar calendar = Calendar.getInstance();
                     java.sql.Date startDate = new java.sql.Date(calendar.getTime().getTime());
@@ -74,10 +73,7 @@ public class ImportPersones {
 
     static void selectPersones(){
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            Connection con=DriverManager.getConnection("jdbc:mysql://192.168.56.101:3306/Eleccions_Generals_GrupB","perepi","pastanaga");
-
+            Connection con = ConnexioDBGrup2.getConnection();
             //SENTÈNCIA SELECT
             //Preparem una sentència amb paràmetres.
             String query = "SELECT * " +
@@ -100,7 +96,7 @@ public class ImportPersones {
                 nom0 += rs.getString("cog1");
                 nom0 += rs.getString("cog2");
             }
-            con.close();
+
         }
         catch(Exception e){
             System.out.println(e);}

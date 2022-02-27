@@ -1,12 +1,10 @@
 package projecte.sapa;
 
 
-import org.apache.commons.io.FileUtils;
-import projecte.sapa.*;
+
 import projecte.sapa.apartat1.*;
 import projecte.sapa.apartat4.DescomprimirZip;
-import java.io.IOException;
-import java.sql.SQLException;
+
 
 public class Main {
 
@@ -33,8 +31,7 @@ public class Main {
             System.out.println("g");
             ImportCandidats.ImportarCandidats();
             System.out.println("h");
-            ImportVotsMunicipals.llegir();
-            System.out.println("i");
+
 
 
 
