@@ -15,27 +15,29 @@ public class Main {
 
 
             descomprimit = DescomprimirZip.descomprimirZip();
-            IntroduirDadesBasiques.dadesBasicIntro();
-            System.out.println("a");
-            ImportComunAutonom.importar();
-            System.out.println("b");
-            ImportProvincies.importar();
-            System.out.println("c");
-            ImportMunicpis.importar();
-            System.out.println("d");
-            ImportEleccionsMunicpis.importar();
-            System.out.println("e");
-            ImportCandidatures.llegir();
-            System.out.println("f");
-            ImportPersones.ImportarPersones();
-            System.out.println("g");
-            ImportCandidats.ImportarCandidats();
-            System.out.println("h");
-
-
-
-
-            System.out.println("Fin");
+        IntroduirDadesBasiques.dadesBasicIntro();
+        System.out.println("Importació de eleccions municipals fet");
+        ImportComunAutonom.importar();
+        System.out.println("Importació de comunitats autònomes fet");
+        ImportProvincies.importar();
+        System.out.println("Importació de provincies fet");
+        ImportMunicpis.importar();
+        System.out.println("Importació de municipis fet");
+        ImportEleccionsMunicpis.importar();
+        System.out.println("Importació de eleccions fet");
+        ImportCandidatures.llegir();
+        System.out.println("Importació de candidatures fet");
+        ImportPersones.ImportarPersones();
+        System.out.println("Importació de persones fet");
+        ImportCandidats.ImportarCandidats();
+        System.out.println("Importació de candidats fet");
+        ImportVotsAutonomic.lligirText();
+        System.out.println("Importació de vots autonòmics fet");
+        ImportVotsProvincials.llegir();
+        System.out.println("Importació de vots provincials fet");
+        ImportVotsMunicipals.llegir();
+        System.out.println("Importació de vots municipals fet");
+        System.out.println("\nProcés complet!");
 
 
 
